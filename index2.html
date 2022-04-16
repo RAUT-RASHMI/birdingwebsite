@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social media share</title>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link rel="icon" type="image/x-icon" href="arrow_social_media_network-256.webp">
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+}
+
+body{
+	/* background: #58b600; */
+	color: white;
+   /* background: url("https://giphy.com/embed/xTcnSMB8VXjTox23zW"); */
+   background-color: black;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+        background-size: 100%;
+}
+.content p{
+	position: relative;
+    top: 25px;
+	text-align: center;
+	font-family: 'Beau Rivage', cursive;
+	font-size: 190%;
+    
+}
+
+.wrapperleft{
+	position: absolute;
+	top: 22%;
+	left: 23%;
+	width: 319px;
+	 height: 560px; 
+	 frameBorder:"0" solid black; 
+	 border: none;
+}
+.wrapperright{
+	position: absolute;
+	top: 22%;
+	left: 56%;
+	width: 319px;
+	 height: 560px; 
+	 frameBorder:"0" solid black; 
+	 border: none;
+     transform:scaleX(-1);
+}
+.wrapperleft iframe{
+	border-width: 0px;
+}
+.wrapper{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+    
+}
+
+.toggle_button{
+	width: 250px;
+	height: 65px;
+	background: #fff;
+	border-radius: 50px;
+	overflow: hidden;
+	transition: all 0.2s ease;
+    box-shadow: 0 10px 20px 3px #ad6128;
+    transition: transform .5s;
+}
+
+.toggle_button ul li a{
+	display: flex;
+	align-items: center;
+	height: 65px;
+	padding: 0 35px;
+}
+
+.toggle_button ul li a.share_btn{
+	justify-content: center;
+	cursor: pointer;
+}
+
+.toggle_button ul li a.share_btn .text{
+	font-weight: 700;
+	font-size: 24px;
+    letter-spacing: 10px;
+    color: #c73a5d;
+    margin-right: 15px;
+}
+
+.toggle_button ul li a.share_btn .icon{
+	width: 35px;
+	height: 35px;
+	background: #c73a5d;
+	display: inline-block;
+	border-radius: 50%;
+	position: relative;
+	transition: all 1s ease;
+}
+
+.toggle_button ul li a .icon i{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #fff;
+}
+
+.toggle_button ul li a.sm .icon{
+	position: relative;
+	width: 35px;
+	height: 35px;
+	background: red;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+
+.toggle_button ul li a .text{
+	letter-spacing: 2px;
+}
+
+.toggle_button ul li a.facebook .icon{
+	background: #3b5998;
+}
+
+.toggle_button ul li a.facebook .text{
+	color: #3b5998;
+}
+
+.toggle_button ul li a.twitter .icon{
+	background: #1da1f2;
+}
+
+.toggle_button ul li a.twitter .text{
+	color: #1da1f2;
+}
+
+.toggle_button ul li a.instagram .icon{
+	background: #c32aa3;
+}
+
+.toggle_button ul li a.instagram .text{
+	color: #c32aa3;
+}
+
+
+
+.toggle_button.active{
+	height: 300px;
+}
+
+.toggle_button.active ul li a.share_btn .icon{
+	transform: rotate(45deg);
+}
+
+.toggle_button ul li a.sm{
+	visibility: hidden;
+}
+
+.toggle_button.active ul li a.sm {
+    visibility: visible;
+    transition-delay: 0.3s;
+}
+    </style>
+
+<body>
+    <div class="content">
+       <p>
+        Until you spread your wings; you'll have no idea how far you can fly
+       </p>
+	
+    </div>
+	<div class="wrapperleft">
+        <img src="giphy.gif" alt="share">
+	</div>
+	<div class="wrapperright">
+        <img src="giphy.gif" alt="share">
+	</div>
+    <div class="wrapper">
+		<div class="toggle_button">
+			<ul>
+				<li>
+					<a class="share_btn">
+						<span class="text">SHARE</span>
+						<span class="icon"><i class="fas fa-plus"></i></span>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com" target="_blank" class="sm facebook">
+						<span class="icon">
+							<i class="fab fa-facebook-f"></i>
+						</span>
+						<span class="text">Facebook</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.twiiter.com" target="_blank" class="sm twitter">
+						<span class="icon">
+							<i class="fab fa-twitter"></i>
+						</span>
+						<span class="text">Twitter</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com" target="_blank" class="sm instagram">
+						<span class="icon">
+							<i class="fab fa-instagram"></i>
+						</span>
+						<span class="text">Instagram</span>
+					</a>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+
+<script>
+	var share_btn = document.querySelector(".share_btn");
+	var toggle_button = document.querySelector(".toggle_button");
+
+	share_btn.addEventListener("click", function(){
+		toggle_button.classList.toggle("active");
+	})
+</script>
+
+</body>
+</html>
